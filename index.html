@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor - Edit Images Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>📸 Photo Editor</h1>
+            <p class="subtitle">Edit and enhance your photos online</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Controls Panel -->
+            <aside class="controls-panel">
+                <div class="control-section">
+                    <h3>Upload Image</h3>
+                    <input type="file" id="imageInput" accept="image/*" class="file-input">
+                    <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                </div>
+
+                <div class="control-section">
+                    <h3>Adjustments</h3>
+                    
+                    <div class="control-group">
+                        <label for="brightness">Brightness</label>
+                        <input type="range" id="brightness" min="0" max="200" value="100">
+                        <span class="value-display">100%</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="contrast">Contrast</label>
+                        <input type="range" id="contrast" min="0" max="200" value="100">
+                        <span class="value-display">100%</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="saturation">Saturation</label>
+                        <input type="range" id="saturation" min="0" max="200" value="100">
+                        <span class="value-display">100%</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="hue">Hue Rotation</label>
+                        <input type="range" id="hue" min="0" max="360" value="0">
+                        <span class="value-display">0°</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="blur">Blur</label>
+                        <input type="range" id="blur" min="0" max="20" value="0">
+                        <span class="value-display">0px</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="grayscale">Grayscale</label>
+                        <input type="range" id="grayscale" min="0" max="100" value="0">
+                        <span class="value-display">0%</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="sepia">Sepia</label>
+                        <input type="range" id="sepia" min="0" max="100" value="0">
+                        <span class="value-display">0%</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="invert">Invert</label>
+                        <input type="range" id="invert" min="0" max="100" value="0">
+                        <span class="value-display">0%</span>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h3>Presets</h3>
+                    <button class="preset-btn" data-preset="vintage">Vintage</button>
+                    <button class="preset-btn" data-preset="cool">Cool</button>
+                    <button class="preset-btn" data-preset="warm">Warm</button>
+                    <button class="preset-btn" data-preset="bw">B&W</button>
+                </div>
+
+                <div class="control-section">
+                    <h3>Actions</h3>
+                    <button id="downloadBtn" class="btn btn-primary">⬇️ Download</button>
+                    <button id="copyBtn" class="btn btn-secondary">📋 Copy</button>
+                </div>
+            </aside>
+
+            <!-- Canvas Area -->
+            <div class="canvas-area">
+                <div class="canvas-container">
+                    <canvas id="canvas"></canvas>
+                    <div class="placeholder" id="placeholder">
+                        <p>Upload an image to get started</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Photo Editor. Made with ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
